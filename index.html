@@ -149,10 +149,10 @@
                         <!-- Comparativa de Pares -->
                         <div class="mt-6 pt-4 border-t border-gray-100 bg-gray-50 p-4 rounded-xl border border-gray-100 space-y-2 text-center">
                             <div class="text-xs text-gray-700">
-                                Par original: <strong class="text-accent code-font">\((a, b) = (<span id="txt-a">2</span>, <span id="txt-b">4</span>)\)</strong>
+                                Par original: <strong class="text-accent code-font">(a, b) = (<span id="txt-a">2</span>, <span id="txt-b">4</span>)</strong>
                             </div>
                             <div class="text-xs text-gray-700">
-                                Par invertido: <strong class="text-gray-600 code-font">\((b, a) = (<span id="txt-b-inv">4</span>, <span id="txt-a-inv">2</span>)\)</strong>
+                                Par invertido: <strong class="text-gray-600 code-font">(b, a) = (<span id="txt-b-inv">4</span>, <span id="txt-a-inv">2</span>)</strong>
                             </div>
                             <div id="conmutativo-status" class="text-xs font-bold text-amber-600 pt-1">
                                 \((2, 4) \neq (4, 2)\) (No conmutativo)
@@ -186,7 +186,7 @@
                     </p>
                     <div class="bg-accent-light border border-accent/20 p-3 rounded-xl text-center my-3">
                         <div class="text-accent font-semibold text-xs uppercase tracking-wide mb-1">Condición de Función en el Plano Real</div>
-                        <div class="text-base text-gray-900 font-medium">$$\forall x \in \text{Dom}(f), \ \exists! \, y \in \text{Img}(f) \quad \text{tal que} \quad y = f(x)$$</div>
+                        <div class="text-base text-gray-900 font-medium">$$\forall x \in \text{Dom}(f), \ \exists \, y \in \text{Im}(f) \quad \text{tal que} \quad y = f(x)$$</div>
                     </div>
                 </div>
 
@@ -232,7 +232,7 @@
                                 <div class="bg-gray-50 p-3.5 rounded-xl border border-gray-200">
                                     <div class="flex items-center gap-2 mb-1">
                                         <span class="w-2.5 h-2.5 rounded-full bg-accent"></span>
-                                        <span class="text-xs font-bold text-gray-800 uppercase">Variable Independiente (\(x\))</span>
+                                        <span class="text-xs font-bold text-gray-800"><span class="uppercase">Variable Independiente</span> (\(x\))</span>
                                     </div>
                                     <p class="text-xs text-gray-600 leading-relaxed">
                                         Representada en el <strong>eje horizontal (abscisas)</strong>. Constituye la causa, insumo o parámetro controlado: tiempo transcurrido (h), dosis de fármaco administrada (mg/kg), temperatura (°C).
@@ -241,7 +241,7 @@
                                 <div class="bg-gray-50 p-3.5 rounded-xl border border-gray-200">
                                     <div class="flex items-center gap-2 mb-1">
                                         <span class="w-2.5 h-2.5 rounded-full bg-emerald-600"></span>
-                                        <span class="text-xs font-bold text-gray-800 uppercase">Variable Dependiente (\(y = f(x)\))</span>
+                                        <span class="text-xs font-bold text-gray-800"><span class="uppercase">Variable Dependiente</span> (\(y = f(x)\))</span>
                                     </div>
                                     <p class="text-xs text-gray-600 leading-relaxed">
                                         Representada en el <strong>eje vertical (ordenadas)</strong>. Constituye el efecto o magnitud biológica observada: concentración plasmática (\(\mu\text{g/mL}\)), presión arterial (\(\text{mmHg}\)), frecuencia cardíaca.
@@ -263,7 +263,7 @@
                 <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
                     <h2 class="text-xl font-bold text-gray-800 mb-1">Dominio e Imagen (Cálculo Analítico y Gráfico)</h2>
                     <p class="text-xs text-gray-500">
-                        Determinación rigurosa del <strong>Dominio</strong> (\(\text{Dom}(f)\)) analizando restricciones algebraicas en \(\mathbb{R}\), y de la <strong>Imagen</strong> (\(\text{Img}(f)\)) mediante proyección ortogonal sobre el eje \(Y\).
+                        Determinación rigurosa del <strong>Dominio</strong> (\(\text{Dom}(f)\)) analizando restricciones algebraicas en \(\mathbb{R}\), y de la <strong>Imagen</strong> (\(\text{Im}(f)\)) mediante proyección ortogonal sobre el eje \(y\).
                     </p>
                 </div>
 
@@ -306,12 +306,12 @@
                         <div class="flex flex-wrap justify-between items-center gap-2 mb-2">
                             <h3 class="text-sm font-bold text-gray-800 uppercase tracking-wider">Proyecciones Geométricas en Ejes</h3>
                             <div class="text-xs font-mono">
-                                <span class="text-blue-600 font-bold">Dom:</span> <span id="badge-dom" class="text-gray-800 font-bold">\( (-\infty, +\infty) \)</span> | 
-                                <span class="text-emerald-600 font-bold">Img:</span> <span id="badge-img" class="text-gray-800 font-bold">\( [-4, +\infty) \)</span>
+                                <span class="text-blue-600 font-bold">Dom(f):</span> <span id="badge-dom" class="text-gray-800 font-bold">\( (-\infty, +\infty) \)</span> | 
+                                <span class="text-emerald-600 font-bold">Im(f):</span> <span id="badge-img" class="text-gray-800 font-bold">\( [-4, +\infty) \)</span>
                             </div>
                         </div>
                         <p class="text-xs text-gray-500 mb-2">
-                            La curva se proyecta sobre el eje \(X\) para el <strong>Dominio</strong> y sobre el eje \(Y\) para la <strong>Imagen</strong>.
+                            La curva se proyecta sobre el eje \(x\) para el <strong>Dominio</strong> y sobre el eje \(y\) para la <strong>Imagen</strong>.
                         </p>
                         <div class="relative flex-grow bg-slate-900 rounded-xl overflow-hidden min-h-[270px] shadow-inner flex items-center justify-center">
                             <canvas id="canvas-mod3" width="460" height="270" class="w-full h-full cursor-crosshair"></canvas>
@@ -470,14 +470,14 @@
                     <ul class="list-disc list-inside space-y-1 ml-1 text-gray-600">
                         <li><strong>Cuatro Familias Funcionales y Restricciones Analíticas:</strong>
                             <ol class="list-decimal list-inside ml-2 space-y-0.5 mt-1">
-                                <li><strong>Polinómica</strong> (\(f(x) = x^2 - 4\)): sin restricciones, \(\text{Dom}(f) = \mathbb{R}\), \(\text{Img}(f) = [-4, +\infty)\).</li>
-                                <li><strong>Racional</strong> (\(f(x) = \frac{1}{x - 2}\)): denominador no nulo (\(x \neq 2\)), \(\text{Dom}(f) = \mathbb{R} \setminus \{2\}\), \(\text{Img}(f) = \mathbb{R} \setminus \{0\}\).</li>
-                                <li><strong>Irracional</strong> (\(f(x) = \sqrt{x - 1}\)): radicando de índice par no negativo (\(x \ge 1\)), \(\text{Dom}(f) = [1, +\infty)\), \(\text{Img}(f) = [0, +\infty)\).</li>
-                                <li><strong>Logarítmica</strong> (\(f(x) = \ln(x + 2)\)): argumento estrictamente positivo (\(x > -2\)), \(\text{Dom}(f) = (-2, +\infty)\), \(\text{Img}(f) = \mathbb{R}\).</li>
+                                <li><strong>Polinómica</strong> (\(f(x) = x^2 - 4\)): sin restricciones, \(\text{Dom}(f) = \mathbb{R}\), \(\text{Im}(f) = [-4, +\infty)\).</li>
+                                <li><strong>Racional</strong> (\(f(x) = \frac{1}{x - 2}\)): denominador no nulo (\(x \neq 2\)), \(\text{Dom}(f) = \mathbb{R} \setminus \{2\}\), \(\text{Im}(f) = \mathbb{R} \setminus \{0\}\).</li>
+                                <li><strong>Irracional</strong> (\(f(x) = \sqrt{x - 1}\)): radicando de índice par no negativo (\(x \ge 1\)), \(\text{Dom}(f) = [1, +\infty)\), \(\text{Im}(f) = [0, +\infty)\).</li>
+                                <li><strong>Logarítmica</strong> (\(f(x) = \ln(x + 2)\)): argumento estrictamente positivo (\(x > -2\)), \(\text{Dom}(f) = (-2, +\infty)\), \(\text{Im}(f) = \mathbb{R}\).</li>
                             </ol>
                         </li>
                         <li><strong>Laboratorio de Evaluación de \(x_0\):</strong> Mueva el deslizador de abscisas para calcular instantáneamente \(f(x_0)\). Si \(x_0\) se encuentra fuera del dominio analítico, el simulador alerta inmediatamente <em>"No Definido (Fuera de Dominio)"</em>.</li>
-                        <li><strong>Proyecciones en Canvas 2D:</strong> La posición del punto \((x_0, f(x_0))\) se dibuja en tiempo real con líneas punteadas que conectan ortogonalmente con ambos ejes, permitiendo visualizar la pertenencia al dominio en el eje \(X\) y a la imagen en el eje \(Y\).</li>
+                        <li><strong>Proyecciones en Canvas 2D:</strong> La posición del punto \((x_0, f(x_0))\) se dibuja en tiempo real con líneas punteadas que conectan ortogonalmente con ambos ejes, permitiendo visualizar la pertenencia al dominio en el eje \(x\) y a la imagen en el eje \(y\).</li>
                     </ul>
                 </div>
 
@@ -626,6 +626,37 @@
             ctx.moveTo(cx, 0); ctx.lineTo(cx, h);
             ctx.stroke();
 
+            // Graduación y etiquetas de los ejes (Ticks y Números)
+            ctx.fillStyle = '#94a3b8';
+            ctx.font = '10px monospace';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'top';
+            for (let x = -8; x <= 8; x++) {
+                if (x === 0) continue;
+                let sx = cx + x * scale;
+                ctx.beginPath();
+                ctx.strokeStyle = '#94a3b8';
+                ctx.lineWidth = 1;
+                ctx.moveTo(sx, cy - 3);
+                ctx.lineTo(sx, cy + 3);
+                ctx.stroke();
+                ctx.fillText(x.toString(), sx, cy + 5);
+            }
+            ctx.textAlign = 'right';
+            ctx.textBaseline = 'middle';
+            for (let y = -6; y <= 6; y++) {
+                if (y === 0) continue;
+                let sy = cy - y * scale;
+                ctx.beginPath();
+                ctx.strokeStyle = '#94a3b8';
+                ctx.lineWidth = 1;
+                ctx.moveTo(cx - 3, sy);
+                ctx.lineTo(cx + 3, sy);
+                ctx.stroke();
+                ctx.fillText(y.toString(), cx - 5, sy);
+            }
+            ctx.fillText('0', cx - 5, cy + 10);
+
             // Puntos discretos A x B
             const setA = [-2, -1, 1, 2];
             const setB = [-2, 0, 2];
@@ -713,6 +744,37 @@
             ctx.moveTo(0, cy); ctx.lineTo(w, cy);
             ctx.moveTo(cx, 0); ctx.lineTo(cx, h);
             ctx.stroke();
+
+            // Graduación y etiquetas de los ejes (Ticks y Números)
+            ctx.fillStyle = '#94a3b8';
+            ctx.font = '10px monospace';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'top';
+            for (let x = -6; x <= 6; x++) {
+                if (x === 0) continue;
+                let sx = cx + x * scale;
+                ctx.beginPath();
+                ctx.strokeStyle = '#94a3b8';
+                ctx.lineWidth = 1;
+                ctx.moveTo(sx, cy - 3);
+                ctx.lineTo(sx, cy + 3);
+                ctx.stroke();
+                ctx.fillText(x.toString(), sx, cy + 5);
+            }
+            ctx.textAlign = 'right';
+            ctx.textBaseline = 'middle';
+            for (let y = -4; y <= 4; y++) {
+                if (y === 0) continue;
+                let sy = cy - y * scale;
+                ctx.beginPath();
+                ctx.strokeStyle = '#94a3b8';
+                ctx.lineWidth = 1;
+                ctx.moveTo(cx - 3, sy);
+                ctx.lineTo(cx + 3, sy);
+                ctx.stroke();
+                ctx.fillText(y.toString(), cx - 5, sy);
+            }
+            ctx.fillText('0', cx - 5, cy + 10);
 
             // Dibujar Curva
             ctx.strokeStyle = '#38bdf8';
@@ -867,6 +929,37 @@
             ctx.moveTo(cx, 0); ctx.lineTo(cx, h);
             ctx.stroke();
 
+            // Graduación y etiquetas de los ejes (Ticks y Números)
+            ctx.fillStyle = '#94a3b8';
+            ctx.font = '10px monospace';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'top';
+            for (let x = -8; x <= 8; x++) {
+                if (x === 0) continue;
+                let sx = cx + x * scale;
+                ctx.beginPath();
+                ctx.strokeStyle = '#94a3b8';
+                ctx.lineWidth = 1;
+                ctx.moveTo(sx, cy - 3);
+                ctx.lineTo(sx, cy + 3);
+                ctx.stroke();
+                ctx.fillText(x.toString(), sx, cy + 5);
+            }
+            ctx.textAlign = 'right';
+            ctx.textBaseline = 'middle';
+            for (let y = -5; y <= 5; y++) {
+                if (y === 0) continue;
+                let sy = cy - y * scale;
+                ctx.beginPath();
+                ctx.strokeStyle = '#94a3b8';
+                ctx.lineWidth = 1;
+                ctx.moveTo(cx - 3, sy);
+                ctx.lineTo(cx + 3, sy);
+                ctx.stroke();
+                ctx.fillText(y.toString(), cx - 5, sy);
+            }
+            ctx.fillText('0', cx - 5, cy + 10);
+
             // Dibujar curva funcional
             ctx.strokeStyle = '#38bdf8';
             ctx.lineWidth = 2.5;
@@ -982,38 +1075,95 @@
             ctx.fillStyle = '#0f172a';
             ctx.fillRect(0, 0, w, h);
 
-            // Ejes cartesianos
+            // Ejes cartesianos y cuadrícula sutil
+            const ox = 42;
+            const oy = h - 24;
+            const rightX = w - 18;
+            const topY = 16;
+
             ctx.strokeStyle = '#64748b';
             ctx.lineWidth = 1.5;
             ctx.beginPath();
-            ctx.moveTo(35, h - 25); ctx.lineTo(w - 15, h - 25); // Eje X
-            ctx.moveTo(35, 15); ctx.lineTo(35, h - 25); // Eje Y
+            ctx.moveTo(ox, oy); ctx.lineTo(rightX, oy); // Eje X
+            ctx.moveTo(ox, topY); ctx.lineTo(ox, oy);   // Eje Y
             ctx.stroke();
 
+            // Configuración de escalas según el caso (idx 0: exp, 1: lineal, 2: cuadrática)
+            let xTicks = [];
+            let yTicks = [];
+            let xToPx = (x) => ox;
+            let yToPx = (y) => oy;
+            let fnPlot = (x) => 0;
+            let xStart = 0, xEnd = 3;
+
+            if (idx === 0) {
+                // Bacterias: x de 0 a 3 (horas), y de 0 a 800 (microorg)
+                xTicks = [0, 1, 2, 3];
+                yTicks = [0, 200, 400, 600, 800];
+                xStart = 0; xEnd = 3;
+                xToPx = (x) => ox + ((x - 0) / 3) * (rightX - ox);
+                yToPx = (y) => oy - ((y - 0) / 850) * (oy - topY);
+                fnPlot = (x) => 100 * Math.pow(2, x);
+            } else if (idx === 1) {
+                // Fármaco: x de 0 a 6 (horas), y de 0 a 120 (mg/L)
+                xTicks = [0, 2, 4, 6];
+                yTicks = [0, 30, 60, 90, 120];
+                xStart = 0; xEnd = 6;
+                xToPx = (x) => ox + ((x - 0) / 6) * (rightX - ox);
+                yToPx = (y) => oy - ((y - 0) / 130) * (oy - topY);
+                fnPlot = (x) => 120 - 15 * x;
+            } else {
+                // Enzima: x de 34 a 40 (°C), y de 90 a 100 (actividad %)
+                xTicks = [35, 36, 37, 38, 39];
+                yTicks = [90, 93, 96, 99, 100];
+                xStart = 34.5; xEnd = 39.5;
+                xToPx = (x) => ox + ((x - 34.5) / 5.0) * (rightX - ox);
+                yToPx = (y) => oy - ((y - 90) / 11) * (oy - topY);
+                fnPlot = (x) => -Math.pow(x - 37, 2) + 100;
+            }
+
+            // Marcas y números en Eje X
+            ctx.fillStyle = '#94a3b8';
+            ctx.font = '10px monospace';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'top';
+            xTicks.forEach(tx => {
+                let px = xToPx(tx);
+                ctx.beginPath();
+                ctx.strokeStyle = '#64748b';
+                ctx.lineWidth = 1;
+                ctx.moveTo(px, oy - 3);
+                ctx.lineTo(px, oy + 3);
+                ctx.stroke();
+                ctx.fillText(tx.toString(), px, oy + 5);
+            });
+
+            // Marcas y números en Eje Y
+            ctx.textAlign = 'right';
+            ctx.textBaseline = 'middle';
+            yTicks.forEach(ty => {
+                let py = yToPx(ty);
+                ctx.beginPath();
+                ctx.strokeStyle = '#64748b';
+                ctx.lineWidth = 1;
+                ctx.moveTo(ox - 3, py);
+                ctx.lineTo(ox + 3, py);
+                ctx.stroke();
+                ctx.fillText(ty.toString(), ox - 5, py);
+            });
+
+            // Trazado de Curva
             ctx.strokeStyle = '#38bdf8';
             ctx.lineWidth = 2.5;
             ctx.beginPath();
-
-            if (idx === 0) {
-                // Exponencial
-                for(let px = 35; px <= w - 15; px++) {
-                    let t = (px - 35) / 50;
-                    let val = 100 * Math.pow(1.5, t);
-                    let py = (h - 25) - (val / 900) * (h - 40);
-                    if (px === 35) ctx.moveTo(px, py); else ctx.lineTo(px, py);
-                }
-            } else if (idx === 1) {
-                // Lineal decreciente
-                ctx.moveTo(35, 30);
-                ctx.lineTo(w - 25, h - 35);
-            } else {
-                // Parabólica
-                for(let px = 35; px <= w - 15; px++) {
-                    let xNorm = (px - 35) / (w - 50);
-                    let yNorm = 4 * xNorm * (1 - xNorm);
-                    let py = (h - 25) - yNorm * (h - 45);
-                    if (px === 35) ctx.moveTo(px, py); else ctx.lineTo(px, py);
-                }
+            let steps = 60;
+            for (let s = 0; s <= steps; s++) {
+                let xVal = xStart + (s / steps) * (xEnd - xStart);
+                let yVal = fnPlot(xVal);
+                let px = xToPx(xVal);
+                let py = yToPx(yVal);
+                if (s === 0) ctx.moveTo(px, py);
+                else ctx.lineTo(px, py);
             }
             ctx.stroke();
         }
